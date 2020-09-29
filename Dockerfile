@@ -2,7 +2,7 @@
 # @version 1.0
 
 ARG PYVER
-FROM chariothy/python-gevent:${PYVER}-latest
+FROM chariothy/python-gevent:${PYVER}
 LABEL maintainer="chariothy@gmail.com"
 
 ARG BUILD_DATE

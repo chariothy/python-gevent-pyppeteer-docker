@@ -44,6 +44,7 @@ jobs:
     - name: Build the image
       run: |
         docker buildx build --push \
+            --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }} \
             --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }}-latest \
             --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }}-${{ steps.vars.outputs.date }} \
             --platform linux/amd64,linux/arm64 .
