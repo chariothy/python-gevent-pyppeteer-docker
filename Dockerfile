@@ -1,7 +1,8 @@
 # For getmiaoss project
 # @version 1.0
 
-FROM chariothy/python-gevent:3.8
+ARG PYVER
+FROM chariothy/python-gevent:${PYVER}-latest
 LABEL maintainer="chariothy@gmail.com"
 
 ARG BUILD_DATE
