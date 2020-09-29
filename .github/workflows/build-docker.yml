@@ -47,4 +47,5 @@ jobs:
             --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }} \
             --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }}-latest \
             --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }}-${{ steps.vars.outputs.date }} \
+            --build-arg PYVER=${{ matrix.python-version }} \
             --platform linux/amd64,linux/arm64 .
