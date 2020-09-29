@@ -45,7 +45,7 @@ jobs:
       run: |
         docker buildx build --push \
             --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }} \
-            --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }}-${{ steps.date.outputs.date }} \
+            --tag ${GITHUB_REPOSITORY}:${{ matrix.python-version }}-${{ steps.vars.outputs.date }} \
             --platform linux/amd64,linux/arm64 .
 
     - name: Inspect image
